@@ -1,0 +1,108 @@
+.site-header-content{
+	background-color: #044D6E;
+	width: 100%;
+}
+.site-header{
+	padding: 1%;
+	display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 2.2fr 1fr;
+    grid-template-rows: 50px;
+}
+.site-header-logo{
+	text-align: right;
+	padding: 5px 20px 0 0;
+}
+#logo{
+	text-decoration: none;
+	color: #ffffff;
+}
+#logo-font{
+	font-size: 25px;
+}
+.site-header-searchbar{
+	width: 100%
+}
+#searchbar{
+	width: 100%;
+	border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('/BusinessWeb/Images/searchicon.png');
+    background-position: 10px 8px; 
+    padding: 10px 20px 10px 50px;
+    background-repeat: no-repeat;
+}
+.site-header-user-cart-container{
+	display: grid; 
+	grid-template-columns: 150px 100px; 
+	grid-template-rows: 50px; 
+	grid-column-gap: 5px;
+}
+.site-header-user-login{
+	width: 140px;
+	height: 48px;
+}
+#user-login-signup-button{
+	color: white; 
+	width: 100%; 
+	height: 100%; 
+	border:1px solid grey; border-radius: 3px; 
+	background-color: #262537;
+}
+.user-login-signup-container{
+	display: grid; 
+	grid-template-rows: 42px; 
+	grid-template-columns: 30% 70%; 
+	padding-top: 4px;
+}
+.user-icon-container{
+	padding: 4px;
+}
+.user-icon{
+	padding: 4px; 
+	width: 30px; 
+	height:30px; 
+	border-radius: 50%; 
+	border: 2px solid grey; 
+	color:#ffffff; 
+	text-align: center;
+}
+.user-login-signup-container:hover{
+	background-color: #262228;
+}
+.login-signup-container{
+	text-align: left; 
+	display: grid; 
+	grid-template-rows: 15px 15px; 
+	grid-template-columns: 100%;
+}
+.login-signup{
+	color: #ffffff;
+}
+#login-sign-font{
+	font-size: 12px;
+}
+#login-sigup-detail-font{
+	font-size: 10px;
+}
+.site-header-cart{
+	width: 45px;
+	height: 48px;
+}
+#cart-button{
+	color: white; 
+	vertical-align: middle; 
+	background-color: #262537; 
+	width: 100%; 
+	height: 100%; 
+	border-radius: 3px; 
+	border:1px solid grey;
+}
+#cart-button .glyphicon-shopping-cart{
+	font-size: 1.3em;
+}
+#cart-button:hover{
+	background-color: #262228;
+}
