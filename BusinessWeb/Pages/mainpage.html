@@ -12,46 +12,87 @@
 	<link rel="stylesheet" href="/BusinessWebProject/BusinessWeb/Styles/MainPage/footer.css">
 	<link rel="stylesheet" type="text/css" href="/BusinessWebProject/BusinessWeb/Styles/base.css">
 	<title>Business</title>
+
+
+    <script type="text/javascript">
+            
+            function DropDown(el) {
+                this.dd = el;
+                this.placeholder = this.dd.children('span');
+                this.opts = this.dd.find('ul.dropdown > li');
+                this.val = '';
+                this.index = -1;
+                this.initEvents();
+            }
+            DropDown.prototype = {
+                initEvents : function() {
+                    var obj = this;
+
+                    obj.dd.on('click', function(event){
+                        $(this).toggleClass('active');
+                        return false;
+                    });
+
+                    // obj.opts.on('click',function(){
+                    //     var opt = $(this);
+                    //     obj.val = opt.text();
+                    //     obj.index = opt.index();
+                    //     obj.placeholder.text(obj.val);
+                    // });
+                },
+                getValue : function() {
+                    return this.val;
+                },
+                getIndex : function() {
+                    return this.index;
+                }
+            }
+
+            $(function() {
+
+                var dd = new DropDown( $('#categories-dropdown-button') );
+
+                $(document).click(function() {
+                    // all dropdowns
+                    $('.categories-dropdown-button').removeClass('active');
+                });
+
+            });
+
+        </script>
+
+
 </head>
 <body>
 	<div class="main-content">
 		<header class="site-header-content">
 			<div class="site-header">
 				<div class="site-header-logo">
-					<a href="/BusinessWeb/Pages/mainpage.html" id="logo"><font id="logo-font">WebSite</font></a>
+					<a href="/BusinessWebProject/BusinessWeb/Pages/mainpage.html" id="logo"><font id="logo-font">WebSite</font></a>
 				</div>
 				<div class="site-header-searchbar">
 					<form>
 						<input type="text" id="searchbar" placeholder="Search on...." />
 					</form>
 				</div>
-				<div class="site-header-user-cart-container">
-					<div class="site-header-user-login">
-						<button id="user-login-signup-button">
-							<div class="user-login-signup-container">
-								<div class="user-icon-container">
-									<div class="user-icon">
-										<span class="glyphicon glyphicon-user"></span>
-									</div>
-								</div>
-								<div class="login-signup-container">
-									<div class="login-signup">
-										<font id="login-sign-font">
-											<b>Log In/Sign up</b>
-										</font>
-									</div>
-									<div class="login-sigup">
-										<font id="login-sigup-detail-font">$0.00 Cash Bank</font>
-									</div>
-								</div>
-							</div>
-						</button>
-					</div>
-					<div class="site-header-cart">
-						<button id="cart-button">
-							<span class="glyphicon glyphicon-shopping-cart"></span>
-						</button>
-					</div>
+				<div class="site-header-category-container">
+                    <div class="site-header-categories-button">
+                        <div id="categories-dropdown-button" class="categories-dropdown-button" tabindex="1">
+                            <span>Browse Categories</span>
+                            <ul class="dropdown">
+                                <li><a href="#">Men Clothing</a></li>
+                                <li><a href="#">Women Clothing</a></li>
+                                <li><a href="#">Men Shoes</a></li>
+                                <li><a href="#">Women Shoes</a></li>
+                                <li><a href="#">HandBags</a></li>
+                                <li><a href="#">Babies Clothing</a></li>
+                                <li><a href="#">Men Pants</a></li>
+                                <li><a href="#">Sports Clothing</a></li>
+                                <li><a href="#">Plus Size Clothing</a></li>
+                                <li><a href="#">Jewelery</a></li>
+                            </ul>
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</header>
@@ -60,7 +101,7 @@
 
 
 	<div class="body-content">
-		
+
 	</div>
 
 
@@ -102,54 +143,6 @@
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>
         	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- <div class="row">
-                <div class="col-sm-3 myCols">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 myCols">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 myCols">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 myCols">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div> -->
         </div>
         <div class="social-networks">
             <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
